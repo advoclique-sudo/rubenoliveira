@@ -684,5 +684,19 @@ document.querySelectorAll('.faq-q').forEach(b=>b.addEventListener('click',()=>{
   update();
 })();
 </script>
+<!-- Google Ads: conversao Contato no clique do WhatsApp -->
+<script>
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a[href*="wa.me"]');
+    if (link && typeof gtag === 'function') {
+      gtag('event','conversion',{
+        'send_to':'AW-412692369/9Ft0CPOI4KMdEJHf5MQB',
+        'value':1.0,
+        'currency':'BRL',
+        'transport_type':'beacon'
+      });
+    }
+  });
+</script>
 </body>
 </html>
